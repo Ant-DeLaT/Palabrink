@@ -1,7 +1,10 @@
+<?php
+    
+?>
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Palabricio</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -32,18 +35,29 @@
                <!-- Search function -->
                 <!--  -->
         </header>
-                    <main>
+        <main>
+            <!-- Crear PHP que establezca tarjetas por id y orden según sea necesario, a ser posible con  -->
             <!-- cards go here -->
             <!-- Tarjeta de prueba -->
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Título de tarjeta</h5>
-                    <p class="card-text">Lorem Lorem Lorem Lorem etc</p>
-                    <a href="#" class="btn btn-primary">Hacer algo</a>
-                </div>
-            </div>
-
+            <?php 
+                $num_tar=db;
+                if ($num_tar==0){
+                    
+                }
+           
+            
+               else{
+                    foreach($num_tar)
+                    echo "<div class='card' style='width: 18rem;'>
+                <img class='card-img-top' src='' alt='Card image cap'>
+                <div class='card-body'>
+                    <h5 class='card-title'>Título de tarjeta</h5>
+                    <p class='card-text'>Lorem Lorem Lorem Lorem etc</p>
+                    <a href='#' class='btn btn-primary'>Hacer algo</a>
+                    </div>
+                </div>" ;
+                }
+            ?>
 
         </main>
         <footer>
