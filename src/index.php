@@ -2,7 +2,7 @@
     
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <title>Palabricio</title>
         <!-- Required meta tags -->
@@ -33,21 +33,26 @@
               <!-- Name of app -->
                <div>Palabrink</div> 
                <!-- Search function -->
-                <!--  -->
+               <form action="buscar.php">
+                <textarea name="BarraBusqueda" id="BarraBusqueda" placeholder="Buscar...">
+                </textarea>
+                <button ></button>
+               </form>
+              
         </header>
         <main>
             <!-- Crear PHP que establezca tarjetas por id y orden según sea necesario, a ser posible con  -->
             <!-- cards go here -->
             <!-- Tarjeta de prueba -->
             <?php 
-                $num_tar=db;
-                if ($num_tar==0){
-                    
+                $num_tarj=db;
+                if ($num_tarj<1){
+                    echo "
+                        No se han encontrado tarjetas de libros
+                    ";
                 }
-           
-            
                else{
-                    foreach($num_tar)
+                    foreach($num_tarj)
                     echo "<div class='card' style='width: 18rem;'>
                 <img class='card-img-top' src='' alt='Card image cap'>
                 <div class='card-body'>
