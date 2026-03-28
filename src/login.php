@@ -23,7 +23,6 @@
     ?>
     <body> 
         <header>
-            <!-- place navbar here -->
         </header>
         <main>
             <div style=".centrado">
@@ -32,20 +31,16 @@
                     <input type="text" name="Nombre" id="Nombre">
                     <label for="Contraseña">Contraseña</label>
                     <input type="password" name="Contraseña" id="Contraseña">
-                    <button type="submit">Conectarse</button>
+                    <button type="submit" id="btnLogin">Conectarse</button>
                     <small>¿No está <a href="registro.php">registrado</a>?</small>
                 </form>
             </div>
         </main>
         <footer>
-            <!-- place footer here -->
+            <small>Copyright Ant-DeLaT</small>
         </footer>
     <script>
-        const docById= new document.getElementById();
-        if (!docById("Contraseña").contains([0-9])||!docById("Contraseña").contains(['a'-'z'])||!docById("Contraseña").contains(['A'-'Z'])) {
-            // Comprobación Mayusculas,minuslculas y num3r1c0
-            
-        }
+        compRapContr();
     </script>
 
 
