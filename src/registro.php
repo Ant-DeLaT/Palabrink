@@ -16,31 +16,28 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="Estetica.css">
     </head>
     <?php
     include "bas_dat.php";
     
     ?>
     <body> 
-        <header>
-            <!-- place navbar here -->
-        </header>
         <main>
             <div class="centrado">
-                <form action="registro.php">
+                <form action="registro.php" method="post">
                     <label for="Nombre">Nombre</label>
                     <input type="text" name="Nombre" id="Nombre">
                     <label for="Contraseña">Contraseña</label>
                     <input type="password" name="Contraseña" id="Contraseña">
                     <label for="Contraseña2">Verifique su contraseña</label>
-
                     <button type="submit">Conectarse</button>
-                    <small>¿No está <a href="registro.php">registrado</a>?</small>
+                    <small>¿No está <a href="login.php">conectado</a>?</small>
                 </form>
             </div>
         </main>
         <footer>
-            <!-- place footer here -->
+            <small>Copyright Ant-DeLaT & Ilerna (Patri)</small>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script

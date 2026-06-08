@@ -1,5 +1,9 @@
 <?php
-    
+    //error_reporting(E_ALL);
+    //ini_set("display errors","1");
+    //session_start();
+    // require_once("./LogicaServidor/PRUEBASIMPLE.php");
+    /* include_once("./LogicaServidor/Autenticador.php"); */
 ?>
 <!doctype html>
 <html lang="es">
@@ -19,40 +23,42 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="Estetica.css">
     </head>
 
     <body>
         <header>
             <!-- place navbar here -->
-             <!-- Burguer menu -->
-              <div>
+            <!-- Burguer menu -->
+            <div>
                 <div>
-                    
+                    <a href="login.php">BOTON LOGIN RÁPIDO</a>
+                    <a href="GestorLibros.php">ADMIN_LIBROS</a>
                 </div>
-              </div>
-              <!-- Name of app -->
-               <div>Palabrink</div> 
-               <!-- Search function -->
-               <form action="buscar.php">
+            </div>
+                <!-- Name of app -->
+                <div>Palabrink</div> 
+                <!-- Search function -->
+                <form action="buscar.php">
                 <textarea name="BarraBusqueda" id="BarraBusqueda" placeholder="Buscar...">
                 </textarea>
-                <button ></button>
-               </form>
-              
+                <button >BUSCAME ESTA</button>
+            </form>
+            
+            
         </header>
         <main>
             <!-- Crear PHP que establezca tarjetas por id y orden según sea necesario, a ser posible con  -->
             <!-- cards go here -->
             <!-- Tarjeta de prueba -->
             <?php 
-                $num_tarj=db;
+                //$num_tarj=db;
                 if ($num_tarj<1){
                     echo "
                         No se han encontrado tarjetas de libros
                     ";
                 }
-               else{
-                    foreach($num_tarj)
+                else{
                     echo "<div class='card' style='width: 18rem;'>
                 <img class='card-img-top' src='' alt='Card image cap'>
                 <div class='card-body'>

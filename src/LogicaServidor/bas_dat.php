@@ -9,21 +9,20 @@ $contraseña=$_POST["Contraseña"];
 // $contHash=hash("sha256",$contraseña);
 $contHash2=password_hash($contraseña,PASSWORD_DEFAULT);
 
-$conexion=new mysqli($NombreServidor,$NombreUsuServ,$ContraseñaServidor,$baseDeDatos);
+
+ /*Conexion a base de datos + Verificación*/
+$conexion=new mysqli($NombreServidor,$UsuarioServ,$ContraseñaServidor,$baseDeDatos);
 if ($conexion->connect_error) {
     // Si no existe base de datos, salir con mensaje de error
     exit("Error de conexión :".$conexion->connect_error);
 }
 
-function CompContra(){
-    $nombre=$_POST["Nombre"];
-    $contraseña=$_POST["Contraseña"];
-    $contHash2=password_hash($contraseña,PASSWORD_DEFAULT);
-    $ConsultaSQL="SELECT contraseña FROM usuarios WHERE nombre=='$nombre'";
-    if ($contHash2==$ConsultaSQL){
-        return true;
-    }
-    return false;
+ $compDatos= new $conexion->query("SELECT nombre,contrasenya FROM usuarios WHERE nombre===$nombre AND contraseña===$contraseña");
+if ($compDatos->affected_rows===1) {
+ //DEVOLVER TRUE
+}else{
+ //MENSAJE ERROR
 }
-
+$compDatos->close();
 $conexion->close();
+
