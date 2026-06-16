@@ -42,7 +42,7 @@
                 <form action="buscar.php">
                 <textarea name="BarraBusqueda" id="BarraBusqueda" placeholder="Buscar...">
                 </textarea>
-                <button >BUSCAME ESTA</button>
+                <button >BUSCAR</button>
             </form>
             
             
@@ -69,7 +69,6 @@
                 </div>" ;
                 }
             ?>
-
         </main>
         <footer>
             <!-- place footer here -->

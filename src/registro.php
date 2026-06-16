@@ -1,7 +1,19 @@
+<?php
+    if ($_SERVER['REQUEST_METHOD']=='POST') {
+        $error="";
+        /* if(Comparación nombre->base datos){
+            $error+= "Error en identificación; usuario o contraseña incorrectos";
+        } */
+       if (strlen($error)===0) {
+        # 
+       }
+        die("No se ha podido entrar en el registro por: "+$error);
+    }
+?>
 <!doctype html>
 <html lang="es">
     <head>
-        <title>Login</title>
+        <title>Registro</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -18,10 +30,6 @@
         />
         <link rel="stylesheet" href="Estetica.css">
     </head>
-    <?php
-    include "bas_dat.php";
-    
-    ?>
     <body> 
         <main>
             <div class="centrado">

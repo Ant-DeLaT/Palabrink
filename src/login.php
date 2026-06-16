@@ -1,10 +1,21 @@
 <?php
     // Lógica de servidor
-    session_start();
+    /* session_start() */
     //include (__DIR__."/../LogicaServidor/bas_dat.php");
-    include (__DIR__."/../LogicaServidor/Autenticador.php");
+    /* include (__DIR__."/../LogicaServidor/Autenticador.php"); */
+    if ($_SERVER['REQUEST_METHOD']=='POST') {
+        $error="";
+        /* if(Comparación nombre->base datos){
+        $error+= "Error en identificación; usuario o contraseña incorrectos";
+        } */
+       if (strlen($error)===0) {
+        # reenviar a index
+       }
+        die("No se ha podido entrar en el login por: "+$error);
+    }
+
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <title>Login</title>
@@ -21,11 +32,12 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <!-- <style>body{background-color:black}</style> -->
         <link rel="stylesheet" href="Estetica.css">
     </head>
     <body>
         <main>
-            <div style=".centrado{}">
+            <div style=".centrado">
                 <form action="login.php" method="post">
                     <label for="Nombre">Nombre</label>
                     <input type="text" name="Nombre" id="Nombre">
@@ -40,9 +52,6 @@
             <small>Copyright Ant-DeLaT & Ilerna (Patri)</small>
         </footer>
     </body>
-    <script src="/src/JavaScript/compRapContr.js">
-        compRapContr();
-    </script>
     <!-- Bootstrap JavaScript Libraries -->
     <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
