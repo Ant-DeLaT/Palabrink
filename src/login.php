@@ -10,6 +10,7 @@
         } */
        if (strlen($error)===0) {
         # reenviar a index
+        header("index.php");
        }
         die("No se ha podido entrar en el login por: "+$error);
     }

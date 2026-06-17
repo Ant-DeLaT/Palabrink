@@ -5,7 +5,7 @@
             $error+= "Error en identificación; usuario o contraseña incorrectos";
         } */
        if (strlen($error)===0) {
-        # 
+        header("index.php");
        }
         die("No se ha podido entrar en el registro por: "+$error);
     }
