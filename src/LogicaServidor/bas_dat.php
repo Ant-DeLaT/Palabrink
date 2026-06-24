@@ -19,9 +19,9 @@ if ($conexion->connect_error) {
 
  $compDatos= new $conexion->query("SELECT nombre,contrasenya FROM usuarios WHERE nombre===$nombre AND contraseña===$contraseña");
 if ($compDatos->affected_rows===1) {
- //DEVOLVER TRUE
+ return true;
 }else{
- //MENSAJE ERROR
+ return false;
 }
 $compDatos->close();
 $conexion->close();

@@ -3,7 +3,10 @@ body {
     background-color:rgb(252,246,235) ;
     color:rgb(40,94,99)
 }
-
+footer{
+    position: absolute;
+    bottom: 0;
+}
 /*
 !!!
 COLORES PALABRINK

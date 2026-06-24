@@ -22,6 +22,7 @@
         <title>Login</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- bootstrap -->
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -38,15 +39,17 @@
     </head>
     <body>
         <main>
-            <div style=".centrado">
-                <form action="login.php" method="post">
-                    <label for="Nombre">Nombre</label>
-                    <input type="text" name="Nombre" id="Nombre">
-                    <label for="Contraseña">Contraseña</label>
-                    <input type="password" name="Contraseña" id="Contraseña">
-                    <button type="submit" id="btnLogin">Conectarse</button>
-                    <small>¿No está <a href="registro.php">registrado</a>?</small>
-                </form>
+            <div class="container-lg">
+                <div class="centered col-6">
+                    <form action="login.php" method="post">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" name="Nombre" id="Nombre">
+                        <label for="Contraseña">Contraseña</label>
+                        <input type="password" name="Contraseña" id="Contraseña"><br><br>
+                        <button class="btn btn-primary" type="submit" id="btnLogin">Conectarse</button>
+                        <small>¿No está <a href="registro.php">registrado</a>?</small>
+                    </form>
+                </div>
             </div>
         </main>
         <footer>

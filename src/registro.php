@@ -39,7 +39,7 @@
                     <label for="Contraseña">Contraseña</label>
                     <input type="password" name="Contraseña" id="Contraseña">
                     <label for="Contraseña2">Verifique su contraseña</label>
-                    <button type="submit">Conectarse</button>
+                    <button class="btn btn-primary" type="submit">Conectarse</button>
                     <small>¿No está <a href="login.php">conectado</a>?</small>
                 </form>
             </div>
