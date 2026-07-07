@@ -7,6 +7,19 @@ footer{
     position: absolute;
     bottom: 0;
 }
+
+.comfortaa {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  /* Font-weight entre 300-700 */
+  font-weight: 700;
+  font-style: normal;
+}
+header{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
 /*
 !!!
 COLORES PALABRINK

@@ -4,6 +4,14 @@
     //session_start();
     // require_once("./LogicaServidor/PRUEBASIMPLE.php");
     /* include_once("./LogicaServidor/Autenticador.php"); */
+    session_start();
+    if (!isset($_SESSION["Nombre"])){
+        session_unset();
+        session_destroy();
+        
+        echo "<div class='popup-peligro'>SESION NO INICIADA<div>";
+        header("login.php");
+    }
 ?>
 <!doctype html>
 <html lang="es">
@@ -24,29 +32,11 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="Estetica.css">
-    </head>
-
+    </head> 
     <body>
-        <header>
-            <!-- place navbar here -->
-            <!-- Burguer menu -->
-            <div>
-                <div>
-                    <a href="login.php">BOTON LOGIN RÁPIDO</a>
-                    <a href="GestorLibros.php">ADMIN_LIBROS</a>
-                </div>
-            </div>
-                <!-- Name of app -->
-                <div>Palabrink</div> 
-                <!-- Search function -->
-                <form action="buscar.php">
-                <textarea name="BarraBusqueda" id="BarraBusqueda" placeholder="Buscar...">
-                </textarea>
-                <button >BUSCAR</button>
-            </form>
-            
-            
-        </header>
+        <?php
+        require("deCabeza.php");
+        ?>
         <main>
             <!-- Crear PHP que establezca tarjetas por id y orden según sea necesario, a ser posible con  -->
             <!-- cards go here -->
@@ -70,10 +60,9 @@
                 }
             ?>
         </main>
-        <footer>
-            <!-- place footer here -->
-            @copyright Ant-DeLaT
-        </footer>
+       <?php
+       require("aPies.php");
+       ?>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

@@ -17,7 +17,7 @@ if ($conexion->connect_error) {
     exit("Error de conexión :".$conexion->connect_error);
 }
 
- $compDatos= new $conexion->query("SELECT nombre,contrasenya FROM usuarios WHERE nombre===$nombre AND contraseña===$contraseña");
+$compDatos= new $conexion->query("SELECT nombre,contrasenya FROM usuarios WHERE nombre===$nombre AND contraseña===$contraseña");
 if ($compDatos->affected_rows===1) {
  return true;
 }else{

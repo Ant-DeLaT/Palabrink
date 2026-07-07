@@ -35,18 +35,19 @@
             <div class="centrado">
                 <form action="registro.php" method="post">
                     <label for="Nombre">Nombre</label>
-                    <input type="text" name="Nombre" id="Nombre">
+                    <input type="text" name="Nombre" id="Nombre" placeholder="Introduzca su Nombre">
                     <label for="Contraseña">Contraseña</label>
-                    <input type="password" name="Contraseña" id="Contraseña">
+                    <input type="password" name="Contraseña" id="Contraseña" placeholder="Introduzca su Contraseña">
                     <label for="Contraseña2">Verifique su contraseña</label>
+                    <input type="password" name="Contraseña2" id="Contraseña2" placeholder="Repita su Contraseña">
                     <button class="btn btn-primary" type="submit">Conectarse</button>
                     <small>¿No está <a href="login.php">conectado</a>?</small>
                 </form>
             </div>
         </main>
-        <footer>
-            <small>Copyright Ant-DeLaT & Ilerna (Patri)</small>
-        </footer>
+       <?php
+        require("aPies.php");
+        ?>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
